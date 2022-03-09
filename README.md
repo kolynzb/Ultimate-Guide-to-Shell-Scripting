@@ -3,9 +3,18 @@
 
 ## CONTENTS
 
-1.[what-is-the-kernel](#what-is-the-kernel)
+1. [what-is-the-kernel](#what-is-the-kernel)
 
-2.[Basic Linux Commands](#basic-commands-in-the-linux-shell) 3.[Command Line Essentials](#command-line-essentials) -[CLI vs GUI](#cli-vs-gui) -[What is Cli](#what-is-cli) 5.[](#)
+2. [Basic Linux Commands](#basic-commands-in-the-linux-shell)
+
+3. [Command Line Essentials](#command-line-essentials)
+
+- [CLI vs GUI](#cli-vs-gui)
+- [What is Cli](#what-is-cli)
+
+5. [Shell Scripting](#shell-scripting)
+
+- [Basics](#shell-scripting-basics)
 
 ## What is the Kernel
 
@@ -13,20 +22,20 @@
 
 ## Basic Commands in the Linux Shell
 
-1.nano
-:nano is a text editor like vim or emacs. _To use it just append the file name at the end to open a file._ For Instance :`nano textFile.txt`
+1. **nano**
+   :nano is a text editor like vim or emacs. _To use it just append the file name at the end to open a file._ For Instance :`nano textFile.txt`
 
-2.pwd
-:Shows current Directory. _Result_ :`/home/kolynz`
+2. **pwd**
+   :Shows current Directory. _Result_ :`/home/kolynz`
 
-3.ls
-:Lists all files in a directory. _For Instance_ :`ls /home/ #this will list the files in the home directory.and if its not accompannied with a path name it lists those in the current directory`
+3. **ls**
+   :Lists all files in a directory. _For Instance_ :`ls /home/ #this will list the files in the home directory.and if its not accompannied with a path name it lists those in the current directory`
 
-4.`--help`
-:This flag gives you a list of flags associated with a particular Command. _For Instance_ :`ls --help`
+4. **`--help`**
+   :This flag gives you a list of flags associated with a particular Command. _For Instance_ :`ls --help`
 
-5.`ls -l`
-:List files in a long format. _Results_
+5. **`ls -l`**
+   :List files in a long format. _Results_
 
 ```drwxrwxrwx 1 kolynzb kolynzb 512 Feb 21 07:26 insp
 -rwxrwxrwx 1 kolynzb kolynzb 282 Oct 21 21:15 desktop.ini
@@ -38,50 +47,53 @@ w - write
 x - executable
 ```
 
-6.cp
-:Copies files to a directory._For Instance_ `cp test.txt /test` will copy test.txt to /test directory.
+6. **cp**
+   :Copies files to a directory._For Instance_ `cp test.txt /test` will copy test.txt to /test directory.
 
-7.mv
-:Moves files. _For Instance_ `mv test.txt /test` will move test.txt to /test directory.
+7. **mv**
+   :Moves files. _For Instance_ `mv test.txt /test` will move test.txt to /test directory.
 
-8.echo
-:Prints to the console. _For Instance_ `echo 'hello world'`.
+8. **echo**
+   :Prints to the console. _For Instance_ `echo 'hello world'`.
 
-9.cat
-:Concatenates contents of a test file to a terminal _Syntax_ `cat test.txt`
+9. **cat**
+   :Concatenates contents of a test file to a terminal _Syntax_ `cat test.txt`
 
-9.less
-:displays contents of a test file to a terminal in a new window _Syntax_ `less test.txt`
+10. **less**
+    :displays contents of a test file to a terminal in a new window _Syntax_ `less test.txt`
 
-10.grep
-:Grabs data from file or command passed in. _Syntax_`mv --help | grep verbose #is the verbose command available for the move command and what it does`
+11. **grep**
+    :Grabs data from file or command passed in. _Syntax_`mv --help | grep verbose #is the verbose command available for the move command and what it does`
 
-11.touch
-:Creates a new file in current directory _Syntax_ `touch test.txt`
+12. **touch**
+    :Creates a new file in current directory _Syntax_ `touch test.txt`
 
-12.mkdir
-:Creates a new directory _Syntax_ `mkdir test`
+13. **mkdir**
+    :Creates a new directory _Syntax_ `mkdir test`
 
-12.cd
-:Moves into a new directory _Syntax_ `cd test/`
+14. **cd**
+    :Moves into a new directory _Syntax_ `cd test/`
 
-13.chmod
-:used to alter file permissions _Syntax_ `chmod +w text.sh #just adds a writing permission to the file` **or** `git add --chmod=+x . #makes all files added to staging area executable`
-:`chmod 777 test.sh #makes this executable but these numbers are the user the group, others the file name in that order `
-|number|equavalent|meaning|description|
-| ----------- | ----------- |----------- |
-|0|0| nothing|nobody get any information|
-|1|1| execute|execute|
-|2|2| write|write|
-|3|2+1| w+x|read and write|
-|4|4|read|read|
-|5|4+1|r+x|read and execute|
-|6|6|r+x|read and write|
-|7|4+2+1|r+w+x|All Permissions|
+15. **chmod**
+    :used to alter file permissions _Syntax_ `chmod +w text.sh #just adds a writing permission to the file` **or** `git add --chmod=+x . #makes all files added to staging area executable`
+
+: `chmod 777 test.sh #makes this executable but these numbers are the user the group, others the file name in that order `
+
+| number | equavalent | meaning | description                |
+| ------ | ---------- | ------- | -------------------------- |
+| 0      | 0          | nothing | nobody get any information |
+| 1      | 1          | execute | execute                    |
+| 2      | 2          | write   | write                      |
+| 3      | 2+1        | w+x     | read and write             |
+| 4      | 4          | read    | read                       |
+| 5      | 4+1        | r+x     | read and execute           |
+| 6      | 6          | r+x     | read and write             |
+| 7      | 4+2+1      | r+w+x   | All Permissions            |
+
 _so when one writes `chmod 777 filename` the first 7 allows the user to read, write and execute.The second applies to the user group and the last applies to everybosy else._
 
-14.man
-:displays a manual explaining a Command. _Syntax_ `man test`
+14. **man**
+    :displays a manual explaining a Command. _Syntax_ `man test`
 
 ## Command Line Essentials
 
@@ -134,27 +146,29 @@ There are two main broad types
 - **1. Basic Operators**
 
   - 1.Operators
-    Arithmetic Operators
-    |Operator|Purpose|Example|
-    |-----|-----|-----|
-    |+(Addition)| adds values on either side of the operator| `expr $a + $b` will give 30|
-    |-(Subtract)| Subtract values on either side of the operator| `expr $a - $b` will give -10|
-    |\*(Multiply)| Multiply values on either side of the operator| `expr $a \* $b` will give 200|
-    |/(Division)| Divides values on either side of the operator| `expr $a / $b` will give 2|
-    |%(Modulus)| Divides values on either side of the operator returns reminder| `expr $a % $b` will give 0|
-    |=(Assignment)| asigns left to right| ` $a = $b` assign a to b|
-    |==(Equality)| Compares two characters and returns a boolean | ` [$a == $b]` return false|
-    |!=(Not equal)| Compares two characters and returns a boolean| ` [$a != $b]` return true|
+    **Arithmetic Operators**
 
-    Relational Operators
-    |Operator|Purpose|Example|
-    |-----|-----|-----|
-    | -eq | checks equality of two operands| ` [$a -eq $b]` is not true |
-    | -ne | checks none equality of two operands| ` [$a -ne $b]` is true |
-    | -gt | checks if the 1st operand is greater of two operands| ` [$a -gt $b]` is not true |
-    | -lt | checks if the 1st operand is less of two operands| ` [$a -lt $b]` is true |
-    | -ge | checks if the 1st operand is greater or equal to the 2nd operand| ` [$a -ge $b]` is not true |
-    | -le | checks if the 1st operand is less or equal to the 2nd operand| ` [$a -le $b]` is true |
+    | Operator      | Purpose                                                        | Example                       |
+    | ------------- | -------------------------------------------------------------- | ----------------------------- |
+    | +(Addition)   | adds values on either side of the operator                     | `expr $a + $b` will give 30   |
+    | -(Subtract)   | Subtract values on either side of the operator                 | `expr $a - $b` will give -10  |
+    | \*(Multiply)  | Multiply values on either side of the operator                 | `expr $a \* $b` will give 200 |
+    | /(Division)   | Divides values on either side of the operator                  | `expr $a / $b` will give 2    |
+    | %(Modulus)    | Divides values on either side of the operator returns reminder | `expr $a % $b` will give 0    |
+    | =(Assignment) | asigns left to right                                           | ` $a = $b` assign a to b      |
+    | ==(Equality)  | Compares two characters and returns a boolean                  | ` [$a == $b]` return false    |
+    | !=(Not equal) | Compares two characters and returns a boolean                  | ` [$a != $b]` return true     |
+
+    **Relational Operators**
+
+    | Operator | Purpose                                                          | Example                    |
+    | -------- | ---------------------------------------------------------------- | -------------------------- |
+    | -eq      | checks equality of two operands                                  | ` [$a -eq $b]` is not true |
+    | -ne      | checks none equality of two operands                             | ` [$a -ne $b]` is true     |
+    | -gt      | checks if the 1st operand is greater of two operands             | ` [$a -gt $b]` is not true |
+    | -lt      | checks if the 1st operand is less of two operands                | ` [$a -lt $b]` is true     |
+    | -ge      | checks if the 1st operand is greater or equal to the 2nd operand | ` [$a -ge $b]` is not true |
+    | -le      | checks if the 1st operand is less or equal to the 2nd operand    | ` [$a -le $b]` is true     |
 
     Boolean Operators
     |Operator|Purpose|Example|
@@ -172,7 +186,7 @@ There are two main broad types
     | -n | checks if given operand size is non-zero| ` [-n $a]` is true |
     | str | checks if str is not an empty string| ` [-n $a ]` is true |
 
-    File Operators(Bourne-shell-specific)
+    **File Operators(Bourne-shell-specific)**
     |Operator|Purpose|Example|
     |-----|-----|-----|
     | -b file | checks if file is block special file | ` [-b $file]` is false |
