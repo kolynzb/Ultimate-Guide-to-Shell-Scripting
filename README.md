@@ -122,12 +122,13 @@ _Remember Its a personal choice but for scripting its way better to use CLI :dis
 ### Shell Scripting Basics
 
 There are two main broad types
-| BOURNE SHELL TYPES | C SHELL TYPES |
-| ------------------ | ------------------ |
-| Bourne shell | C shell |
-| korn shell | TENEX/TOPS C shell |
-| Bourne-Again shell (BASH) | Z shell |
-| POSIX shell | C shell |
+
+| BOURNE SHELL TYPES        | C SHELL TYPES      |
+| ------------------------- | ------------------ |
+| Bourne shell              | C shell            |
+| korn shell                | TENEX/TOPS C shell |
+| Bourne-Again shell (BASH) | Z shell            |
+| POSIX shell               | C shell            |
 
 ### Lets begin
 
@@ -223,4 +224,4 @@ There are two main broad types
 - **5. Use Cases** - [4.functions](./01.example-use-cases/):
   these are a few use cases t
 
-[^sources]: Most of the information was retrieved from [Edureka](#http://www.edureka.com) ,cheatsheets from [cheatography](#https://cheatography.com/) , [Travesy Media]()
+[^sources]: Most of the information was retrieved from [Edureka](https://www.youtube.com/watch?v=GtovwKDemnI) ,cheatsheets from [cheatography](https://cheatography.com/kamil/cheat-sheets/shell-utilities-and-sytem-management/) , [Travesy Media](https://www.youtube.com/watch?v=v-F3YLd6oMw)
