@@ -1,6 +1,6 @@
-# -- **Linux Scripting Tutorial**
+# ** -- Linux Scripting Tutorial**
 
-:Linux is a _Unix-like_, open source and community developed os for which is capable of handling activities from multiple users at the same time.
+: Linux is a _Unix-like_, open source and community developed os for which is capable of handling activities from multiple users at the same time.
 
 ## CONTENTS
 
